@@ -5,7 +5,9 @@ import Index from  "./pages/index.vue";
 import About from "./pages/about.vue";
 import Login from "./pages/login.vue";
 import NotFound from "./pages/404.vue";
-import Secret from "./pages/secret.vue";
+import FamilyHistory from "./pages/familyHistory.vue";
+import FamilyMember from "./pages/familyMember.vue";
+import AccountProfile from "./pages/accountProfile.vue";
 
 const {isAuthenticated} = useAuth();
 
@@ -28,10 +30,26 @@ const routes = [
     component: Login,
 },
 
+
 {
-    path: "/secret",
-    name:"Secret",
-    component: Secret,
+    path: "/accountProfile",
+    name:"AccountProfile",
+    component: AccountProfile,
+ 
+},
+
+   
+{
+    path: '/familyMember',
+    name: "FamilyMember",
+    component: FamilyMember,
+  },
+  
+
+{
+    path: "/familyHistory",
+    name:"FamilyHistory",
+    component: FamilyHistory,
     beforeEnter: (to, from, next) => {
         if (!isAuthenticated.value) {
          next("/login");

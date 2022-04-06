@@ -13,18 +13,22 @@ const loggingOut = () => {
 </script>
 
 <template>
-<div class="bg-yellow-800 text-yellow-200">	
+<div class="bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900 text-blue-50 font-medium">	
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="tracking-tight text-3xl font-thin">Vue<span class="font-normal">RealAuth</span>
+        <h1 class="tracking-tight text-3xl font-thin">Family<span class="font-normal">Tree</span>
         </h1>
         <nav>
             <ul class="flex space-x-4 w-full">
-                <router-link to="/"><li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">Home</li></router-link>
-                <router-link to="/about"><li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">About</li></router-link>
-                <router-link v-if="!isAuthenticated" to="/login"><li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">Login</li></router-link>
+                <router-link to="/"><li class="py-8 px-4 hover:cursor-pointer hover:bg-blue-50 hover:text-pink-700">Home</li></router-link>
+                <router-link to="/about"><li class="py-8 px-4 hover:cursor-pointer hover:bg-blue-50 hover:text-pink-700">About</li></router-link>
+                <router-link v-if="!isAuthenticated" to="/login"><li class="py-8 px-4 hover:cursor-pointer hover:bg-blue-50 hover:text-pink-700">Login</li></router-link>
                 <div v-else class="flex">
-                 <router-link  :to="{name: 'Secret'}"><li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">Secret</li></router-link>
-                <button  @click="loggingOut"><li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">Logout</li>
+                <router-link :to="{name: 'AccountProfile'}"><li class="py-8 px-4 hover:cursor-pointer hover:bg-blue-50 hover:text-pink-700">Account Profile</li></router-link>
+                <router-link  :to="{name: 'FamilyHistory'}"><li class="py-8 px-4 hover:cursor-pointer hover:bg-blue-50 hover:text-pink-700">Family History</li></router-link>
+                <router-link :to="{name: 'FamilyMember'}"><li class="py-8 px-4 hover:cursor-pointer hover:bg-blue-50 hover:text-pink-700">Family Member</li>
+                </router-link>
+
+                <button  @click="loggingOut"><li class="py-8 px-4 hover:cursor-pointer hover:bg-blue-50 hover:text-pink-700">Logout</li>
                 </button>
                 </div>
             </ul>

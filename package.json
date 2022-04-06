@@ -1,5 +1,5 @@
 {
-  "name": "vuerealauth",
+  "name": "familytree",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -10,7 +10,7 @@
   "dependencies": {
     "@vueuse/core": "^7.7.1",
     "eslint": "^8.9.0",
-    "firebase": "^9.6.9",
+    "firebase": "^9.6.10",
     "vee-validate": "^4.5.10",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",
